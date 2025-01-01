@@ -6,7 +6,7 @@
 /*   By: oelbied <oelbied@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 10:24:32 by oelbied           #+#    #+#             */
-/*   Updated: 2024/12/30 14:33:34 by oelbied          ###   ########.fr       */
+/*   Updated: 2025/01/01 14:34:12 by oelbied          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@
  
  typedef struct t_list
  {
+	// t_list *head;
 	int data;
+	int index;  // postion
+	int postion; // postion list
 	struct t_list *next;
  }t_list;
 
@@ -36,5 +39,18 @@ char	*ft_strchr(const char *s, int c);
 t_list	*ft_lstnew(int content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int	ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void ft_sa(t_list **head);
+void ft_sb(t_list **head);
+void ft_pb(t_list **heada ,t_list **headb);
+void ft_pa(t_list **heada ,t_list **headb);
+void ft_ra(t_list **heada);
+void ft_rb(t_list **headb);
+void ft_rra(t_list **heada);
+void ft_rrb(t_list **headb);
+void ft_ss(t_list **heada ,t_list **headb);
+void ft_rr(t_list **heada,t_list **headb);
+void ft_rrr(t_list **heada,t_list **headb);
 
 #endif
